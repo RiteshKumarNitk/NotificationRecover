@@ -1,0 +1,18 @@
+subprojects {
+    def fixNamespace = { project ->
+        if (project.name == 'shared_storage' && project.extensions.findByName("android")) {
+            println "Applying namespace fix for shared_storage"
+            if (project.android.namespace == null) {
+                project.android.namespace = 'io.alexrintt.sharedstorage'
+            }
+        }
+    }
+
+    if (state.executed) {
+        fixNamespace(it)
+    } else {
+        afterEvaluate { project ->
+            fixNamespace(project)
+        }
+    }
+}

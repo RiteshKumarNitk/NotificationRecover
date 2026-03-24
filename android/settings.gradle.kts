@@ -1,3 +1,5 @@
+rootProject.name = "notifylog_manager"
+
 pluginManagement {
     val flutterSdkPath =
         run {

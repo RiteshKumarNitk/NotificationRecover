@@ -1,0 +1,56 @@
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources
+
+> Task :gradle:compileKotlin
+w: file:///C:/flutter/packages/flutter_tools/gradle/src/main/kotlin/DependencyVersionChecker.kt:194:39 'getter for minSdkVersion: AndroidVersion' is deprecated. Will be removed in v9.0
+
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:classes
+> Task :gradle:jar
+
+> Configure project :shared_storage
+Applying namespace fix for shared_storage
+
+> Task :app:ReleaseMinSdkCheck
+
+> Task :app:compileFlutterBuildRelease
+lib/providers/status_provider.dart:59:38: Error: Required named parameter 'columns' must be provided.
+        final files = await listFiles(targetUri).toList();
+                                     ^
+../../../AppData/Local/Pub/Cache/hosted/pub.dev/shared_storage-0.8.1/lib/src/saf/api/tree.dart:31:22: Context: Found this candidate, but the arguments don't match.
+Stream<DocumentFile> listFiles(
+                     ^^^^^^^^^
+lib/providers/status_provider.dart:30:35: Error: The method 'getPersistedUriPermissions' isn't defined for the type 'StatusProvider'.
+ - 'StatusProvider' is from 'package:notifylog_manager/providers/status_provider.dart' ('lib/providers/status_provider.dart').
+Try correcting the name to the name of an existing method, or defining a method named 'getPersistedUriPermissions'.
+      final persistedUris = await getPersistedUriPermissions();
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Target kernel_snapshot_program failed: Exception
+
+
+> Task :app:compileFlutterBuildRelease FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/RiteshKumar/Documents/github/whatsappRecover/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildRelease'.
+> Process 'command 'C:\flutter\bin\flutter.bat'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.12/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 23s
+6 actionable tasks: 5 executed, 1 up-to-date
